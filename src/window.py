@@ -7,7 +7,8 @@ class Window():
           self.root = Tk()
           self.root.title = "Maze Solver"
           self.root.protocol("WM_DELETE_WINDOW", self.close)
-          self.canvas = Canvas()
+          self.root.geometry(f"{w}x{h}")
+          self.canvas = Canvas(width=w, height=h)
           self.canvas.pack()
           self.running = False
      def redraw(self):
